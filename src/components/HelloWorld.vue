@@ -1,95 +1,34 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div>
+    <full-page ref="fullpage" :options="options" id="fullpage">
+      <div class="section">
+        <h1>{{ msg }}</h1>
+      </div>
+      <div class="section">
+        First section ...
+      </div>
+      <div class="section">
+        Second section ...
+      </div>
+    </full-page>
   </div>
 </template>
 
 <script>
+import FullPage from 'vue-fullpage.js/src/FullPage'
+
 export default {
-  name: 'HelloWorld',
+  name: 'index',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: '2020 面試題',
+      options: {
+        anchors: ['page1', 'page2', 'page3']
+      }
     }
+  },
+  components: {
+    FullPage
   }
 }
 </script>
